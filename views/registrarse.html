@@ -23,11 +23,92 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/acceder">Iniciar Sesion</a>
         </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin">Administración</a>
+          </li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="container">
+  <div>
+    <div class="row"> 
+      <div class="col-md-6">
+        <h3> Registrarse </h3>
+        <br>
+        <div class="mb-3">
+          <label for="idnc" class="form-label">Numero de control</label>
+           <input type="text" class="form-control" id="idnc" name="idnc" required="Llenar este campo" placeholder="ej. 190117615">
+        </div>
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Nombre completo</label>
+           <input type="text" class="form-control" id="fullname" name="fullname" placeholder="ej. Angel Patiño">
+        </div>
+        <div class="mb-3">
+          <label for="course" class="form-label">Carrera:</label>
+          <select class="form-select" id= "course" aria-label="Default select example">
+            <option selected>Selecciona una opcion</option>
+            <option value="Licenciatura en Arquitectura">Licenciatura en Arquitectura</option>
+            <option value="Licenciatura en Gastronomía">Licenciatura en Gastronomía</option>
+            <option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option>
+            <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+            <option value="Ingeniería en Gestión Empresarial">Ingeniería en Gestión Empresarial</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="semstry" class="form-label">Semestre</label>
+           <input type="number" class="form-control" id="semestry" name="semestry" placeholder="ej. 9">
+        </div>
+        <div class="mb-3">
+          <label for="profilepicture" class="form-label">Foto de Perfil</label>
+           <input type="file" class="form-control" id="profilepicture" name="profilepicture" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="academicInt" class="form-label">Interes Academico</label>
+           <input type="text" class="form-control" id="academicInt" name="academicInt" placeholder="Escribe tus intereses Academicos">
+        </div>
+        <div class="mb-3">
+          <label for="habilities" class="form-label">Habilidades y Fortalezas</label>
+           <input type="text" class="form-control" id="habilities" name="habilities" placeholder="Escribe tus habilidades y fortalezas">
+        </div>
+        <div class="mb-3">
+          <label for="goals" class="form-label">Metas a corto y largo plazo</label>
+           <input type="text" class="form-control" id="goals" name="goals" placeholder="Escribe tus metas a corto y largo plazo">
+        </div>
+        <div class="mb-3">
+          <label for="emailex" class="form-label">Correo Electronico</label>
+           <input type="email" class="form-control" id="emailex" name="emailex" placeholder="ej. pv190117615@vallarta.tecmm.edu.mx">
+           <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+             <input type="password" class="form-control" id="password" name="password" placeholder="ej. Ksh9P&7x0@Z5">
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" onclick="registrar()">Registrarse</button>
+          </div>
+          </div>
+      </div>
+      <div class="col-md-6"> 
+        <h3>Agrega un Proyecto </h3>
+        <br>
+        <div class="mb-3">
+          <label for="projectname" class="form-label">Nombre del Proyecto</label>
+           <input type="text" class="form-control" id="projectname" name="projectname" placeholder="ej. Anuario Escolar">
+        </div>
+        <div class="mb-3">
+          <label for="projectdesc" class="form-label">Descripción del Proyecto</label>
+           <input type="text" class="form-control" id="projectdesc" name="projectdesc"  placeholder="ej. Hacer sitio web de un anuario Escolar">
+        </div>
+        <div class="mb-3">
+          <label for="projectpic" class="form-label">Foto del proyecto</label>
+           <input type="file" class="form-control" id="projectpic" name="projectpic" placeholder="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/public/js/registrarse.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
