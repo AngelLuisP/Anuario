@@ -1,5 +1,26 @@
-const container = document.getElementById("container-cards"); 
+const container = document.getElementById("container-cards");
+const inputBuscar = document.getElementById('buscar');
 
+inputBuscar.addEventListener('keyup', e => {
+    const busqueda = e.target.value.toLowerCase();
+    const cards = document.querySelectorAll('.col-md-4');
+    let encontrado = false;
+
+    cards.forEach(card => {
+        const titulo = card.querySelector('h5').textContent.toLowerCase();
+
+        if (titulo.includes(busqueda)) {
+            encontrado = true;
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    if (!encontrado) {
+        console.error("No se encontraron tarjetas que coincidan con la búsqueda.");
+    }
+});
 
 function showcards(data) {
     console.log (data)
